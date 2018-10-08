@@ -32,3 +32,4 @@ iface wlan1 inet manual
 
 1. https://codereview.stackexchange.com/questions/46652/python-auth-using-requests
 2. https://blog.apcelent.com/json-web-token-tutorial-with-example-in-python.html
+3. https://docs.python-guide.org/scenarios/json/
