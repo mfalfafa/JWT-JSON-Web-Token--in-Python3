@@ -21,6 +21,20 @@ print (token_type)
 
 # Get Data from API using Get method and token
 hed = {'Authorization':token_type+' '+token}
-PARAMS_GET = {'id' : '2'}
+PARAMS_GET = {'id' : '1'}
 r = requests.get(url = dataFactoriesURL, params = PARAMS_GET, headers=hed)
-print(r.json())
+# Convert from single quote mark to double quote mark
+json_data=json.dumps(r.json()[0])
+# Parsing json data
+parsed_json=json.loads(json_data)
+# Array of parsed json
+id_=str(parsed_json['id'])
+email=str(parsed_json['email'])
+code=str(parsed_json['code'])
+name=str(parsed_json['name'])
+phone=str(parsed_json['phone'])
+# print result
+print (json_data)
+print ('id = '+ id_)
+print ('email = '+ email)
+print ('name = '+ name)
